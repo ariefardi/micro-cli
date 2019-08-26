@@ -5,7 +5,7 @@ const broker_config = {
     bind_address: process.env.BROKER_HOST,
     services: [
         {
-            name: "address_book",
+            name: "example",
             upstream: [
                 process.env.SERVICE_HOST
             ]

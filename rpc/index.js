@@ -1,13 +1,14 @@
 const Service = require("qgrail-broker").Service;
-const AddressBookService = new Service(process.env.SERVICE_HOST, {
+const Example = __shared("example");
+
+const ExampleService = new Service(process.env.SERVICE_HOST, {
     log: (type, data) => {
         console.log(type, ": ", data);
     }
 });
 
-const AddressBook = __shared("address_book");
-AddressBookService.func("address_book/detail", AddressBook.detail);
+ExampleService.func("example/detail", Example.detail);
 
-AddressBookService.listen();
+ExampleService.listen();
 
 

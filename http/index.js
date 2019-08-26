@@ -31,7 +31,7 @@ http.use((req, res, next) => {
 })
 http.use(BodyParser.json());
 
-http.use("/address-book", require(`${__dirname}/address_book`));
+http.use("/example", require(`${__dirname}/example`));
 
 http.use((err, req, res, next) => {
     console.log("UNEXPECTED-ERROR: ", err.stack);
